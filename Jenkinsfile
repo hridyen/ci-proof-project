@@ -1,5 +1,5 @@
 pipeline {
-    agent ( label: 'ubuntu-agent' )
+    agent (label: 'ubuntu-agent')
 
     environment {
         CI = 'true'
@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out repository...'
-                git 'https://github.com/YOUR_USERNAME/ci-proof-poc.git'
+                git 'https://github.com/hridyen/ci-proof-project.git'
             }
         }
 
