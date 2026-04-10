@@ -1,5 +1,7 @@
 pipeline {
-    agent (label: 'ubuntu-agent')
+    agent {
+        label: 'ubuntu-agent'
+    }
 
     environment {
         CI = 'true'
