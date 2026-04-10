@@ -1,0 +1,19 @@
+{
+    "name": "ci-proof-poc",
+    "version": "1.0.0",
+    "description": "R&D proof of concept for CI job, automated tests, and pass/fail artifacts using Jenkins and Jest",
+    "main": "app/math.js",
+    "scripts": {
+        "test": "jest --ci",
+        "test:pass": "jest tests/math.pass.test.js --ci --reporters=default --reporters=jest-junit",
+        "test:fail": "jest tests/math.fail.test.js --ci --reporters=default --reporters=jest-junit"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0",
+        "jest-junit": "^16.0.0"
+    },
+    "jest-junit": {
+        "outputDirectory": "reports",
+        "outputName": "junit.xml"
+    }
+}
